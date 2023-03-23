@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyledFormAddContacts } from './FormAddContact.styled';
-import { addContact, getContacts } from 'redux/ContactsSlice';
+import { addContact, selectContacts } from 'redux/ContactsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 
 export const FormAddContact = () => {
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
   const handleSubmit = e => {

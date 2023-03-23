@@ -15,4 +15,4 @@ export const filterReducer = filterSlice.reducer;
 
 //Selectors
 
-export const getFilteredContact = state => state.filter.value;
+export const selectFilteredContact = state => state.filter.value;
