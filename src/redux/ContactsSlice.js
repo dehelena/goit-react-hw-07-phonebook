@@ -81,7 +81,9 @@ const contactsSlice = createSlice({
         return {
           ...state,
           isLoading: false,
-          items: state.items.filter(contact => contact.id !== action.payload),
+          items: state.items.filter(
+            contact => contact.id !== action.payload.id
+          ),
           error: null,
         };
       })
